@@ -7,6 +7,7 @@ try {
     $oConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $oStmt = $oConn->prepare('SELECT data FROM `hello_world`');
+    $oStmt->execute();
     $oResult = $oStmt->fetchAll();
 
     foreach ($oResult as $aRow) {
